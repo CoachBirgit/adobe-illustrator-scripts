@@ -1,6 +1,6 @@
 # Adobe Illustrator Scripts
 [![Download AllScripts.zip](https://img.shields.io/badge/Download-AllScripts.zip-blue?style=for-the-badge)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/AllScripts.zip)
-<img src="https://img.shields.io/badge/Release-v1.59.0-e8e8e8?style=for-the-badge"> 
+<img src="https://img.shields.io/badge/Release-v1.61.0-e8e8e8?style=for-the-badge"> 
 
 Adobe Illustratorのスクリプト集です。  
 タイトルをクリックすると詳細説明に移動します。
@@ -58,14 +58,15 @@ Adobe Illustratorのスクリプト集です。
 
 ### パス
 [![Download Path.zip](https://img.shields.io/badge/Download-Path.zip-e60012?style=for-the-badge)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/Path.zip)
-- [S字カーブを描く](#S字カーブを描く) `New`
+- [S字カーブを描く](#S字カーブを描く)
 - [アンカーポイントの位置に図形を描く](#アンカーポイントの位置に図形を描く)
 - [アンカーポイントの追加](#アンカーポイントの追加)
+- [円形ガイドを作成](#円形ガイドを作成) `New`
 - [オブジェクトの周囲に長方形を描く](#オブジェクトの周囲に長方形を描く)
-- [オブジェクトの移動](#オブジェクトの移動) `New`
+- [オブジェクトの移動](#オブジェクトの移動)
 - [オブジェクトの整列](#オブジェクトの整列)
 - [オブジェクトの並べ替え](#オブジェクトの並べ替え)
-- [オブジェクトをシャッフル](#オブジェクトをシャッフル) `Update`
+- [オブジェクトをシャッフル](#オブジェクトをシャッフル)
 - [外接円を描く](#外接円を描く)
 - [ガイドオブジェクトの色を削除](#ガイドオブジェクトの色を削除)
 - [ガイドをアートボードにフィット](#ガイドをアートボードにフィット)
@@ -73,6 +74,7 @@ Adobe Illustratorのスクリプト集です。
 - [ガイドを選択](#ガイドを選択)
 - [繰り返し複製](#繰り返し複製)
 - [グリッドラインを作成](#グリッドラインを作成)
+- [十字ガイドを作成](#十字ガイドを作成) `New`
 - [すべてのアンカーをコーナーポイントに切り替え](#すべてのアンカーをコーナーポイントに切り替え)
 - [選択したアンカーポイントを時計回り / 反時計回りに移動](#選択したアンカーポイントを時計回り--反時計回りに移動)
 - [選択したアンカーポイントを時計回り / 反時計回りに増やす](#選択したアンカーポイントを時計回り--反時計回りに増やす)
@@ -141,6 +143,9 @@ Adobe Illustratorのスクリプト集です。
 - [複数アンカーを選択時にハンドルを表示](#複数アンカーを選択時にハンドルを表示)
 - [プレビュー境界を使用](#プレビュー境界を使用)
 - [マウスホイールでズーム](#マウスホイールでズーム)
+
+### ライブラリー
+スクリプト開発者向けです。 よく使用する関数をライブラリーとして、[こちら](libs/README.md)にまとめています。
 <br><br><br>
 
 
@@ -1884,6 +1889,65 @@ Illustrator CS以降
 Illustrator CS以降
 
 <div align="right">[ <a href="#テキスト">↑ トップへ戻る ↑</a> ]</div>
+<br>
+
+
+
+
+
+## <a name="円形ガイドを作成">円形ガイドを作成</a>
+### makeCircularGuides.js
+[![Download Path.zip](https://img.shields.io/badge/Download-Path.zip-e60012?style=flat-square)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/Path.zip)
+<img src="https://img.shields.io/badge/version-1.0.0-e8e8e8?style=flat-square">
+
+選択したアンカーポイントの位置に円形のガイドを作成します。
+
+![Make Circular Guides](images/makeCircularGuides.png)
+> [!NOTE]
+> Illustrator日本語版を使用している場合は、UIは日本語で表示します。
+
+#### 使用方法
+1. ダイレクト選択ツールでアンカーポイントを選択してスクリプトを実行します。
+2. 半径を入力します。複数の円を描きたい場合は、半径をカンマ区切りで入力します。
+3. ハンドルの長さで円を描きたい場合は、［ハンドルの長さを使用］にチェックを付けます。
+
+#### 対応する単位
+ポイント、ピクセル、パイカ、インチ、フィート、ヤード、ミリメートル、センチメートル、メートル。  
+使用する単位は、定規の単位によります。
+
+#### 動作条件
+Illustrator CS4以降
+
+<div align="right">[ <a href="#パス">↑ トップへ戻る ↑</a> ]</div>
+<br>
+
+
+
+
+
+## <a name="十字ガイドを作成">十字ガイドを作成</a>
+### makeCrosshairGuides.js
+[![Download Path.zip](https://img.shields.io/badge/Download-Path.zip-e60012?style=flat-square)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/Path.zip)
+<img src="https://img.shields.io/badge/version-1.0.0-e8e8e8?style=flat-square">
+
+選択したアンカーポイントの位置に十字ガイドを作成します。
+
+![Make Crosshair Guides](images/makeCrosshairGuides.png)
+> [!NOTE]
+> Illustrator日本語版を使用している場合は、UIは日本語で表示します。
+
+#### 使用方法
+1. ダイレクト選択ツールでアンカーポイントを選択してスクリプトを実行します。
+2. ガイドを描く位置（アンカーポイント、ハンドル）を選択します。
+3. ガイドの方向（水平、垂直）を選択します。
+
+> [!NOTE]
+> アートボードの端までガイドを引きます。
+
+#### 動作条件
+Illustrator CS4以降
+
+<div align="right">[ <a href="#パス">↑ トップへ戻る ↑</a> ]</div>
 <br>
 
 

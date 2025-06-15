@@ -1,12 +1,13 @@
 # Libs | Adobe Illustrator Scripts
-Frequently used features were grouped into functions.
+For developers. Libraries of frequently used functions.
 
 [![Download Libs.zip](https://img.shields.io/badge/Download-Libs.zip-e60012?style=flat-square)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/Libs.zip)
 - [Map.js](#Mapjs)
 - [Matrix.js](#Matrixjs)
-- [UI_Image_Encoder.js](#UI_Image_Encoderjs) `Update`
+- [UI_Image_Encoder.js](#UI_Image_Encoderjs)
+- [UI_ReferencePoint.js / UI_ReferencePoint_Large.js](#UI_ReferencePointjs--UI_ReferencePoint_Largejs) `New`
 - [Vector.js](#Vectorjs)
-- [XMP.js](#XMPjs) `Update`
+- [XMP.js](#XMPjs)
 
 ## Usage
 You can include this script or copy the function to use it.  
@@ -299,6 +300,42 @@ var image = dialog.add('image', undefined, File.decode(binary));
 
 ### Requirements
 Illustrator CS4 or higher
+
+<div align="right">[ <a href="#libs--adobe-illustrator-scripts">↑ Back to Top ↑</a> ]</div>
+
+
+
+# <a name="UI_ReferencePointjs--UI_ReferencePoint_Largejs">UI_ReferencePoint.js / UI_ReferencePoint_Large.js</a>
+<img src="https://img.shields.io/badge/version-1.0.0-e8e8e8?style=flat-square">
+
+This script provides the Reference Point UI. Large size is the same size as InDesign.
+
+<img src="../images/UI_ReferencePoint.png" alt="UI Reference Point" width="80%">
+
+### Usage
+```javascript
+// @include '/foo/bar/UI_ReferencePoint.js'
+
+// Get a current reference point
+var key = 'plugin/Transform/AnchorPoint';
+var position = app.preferences.getIntegerPreference(key);
+
+// Get an icon of the current reference point
+var icon = getReferencePoint(position);
+
+// Add the reference point icon in the dialog
+var referencePoint = dialog.add('image', undefined, icon);
+referencePoint.addEventListener('click', changeReferencePoint);
+```
+
+> **Note**  
+> If you want to include this script in your script, comment out or delete the main function in this script.  
+> If you want to copy and paste this UI into your script, copy line 57 and following.  
+> This UI supports all four types of brightness.  
+> The changeReferencePoint function describes the behavior of switching icon.
+
+### Requirements
+Illustrator CC or higher
 
 <div align="right">[ <a href="#libs--adobe-illustrator-scripts">↑ Back to Top ↑</a> ]</div>
 

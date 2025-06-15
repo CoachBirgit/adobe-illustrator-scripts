@@ -2,7 +2,7 @@
 
 # Adobe Illustrator Scripts
 [![Download AllScripts.zip](https://img.shields.io/badge/Download-AllScripts.zip-blue?style=flat-square)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/AllScripts.zip)
-<img src="https://img.shields.io/badge/Release-v1.59.0-e8e8e8?style=flat-square"> 
+<img src="https://img.shields.io/badge/Release-v1.61.0-e8e8e8?style=flat-square"> 
 
 This is a collection of scripts for Adobe Illustrator. I created it with simplicity and ease of use in mind.  
 Click the titles to jump to learn more about the script.  
@@ -71,21 +71,23 @@ If you find a script that interests you, please download it from [![Download](ht
 - [Draw Circumscribed Circle](#drawCircumscribedCirclejs)
 - [Draw Normal Line](#drawNormalLinejs)
 - [Draw Rectangle](#drawRectanglejs)
-- [Draw S-curve](#draws-curvejs) `New`
+- [Draw S-curve](#draws-curvejs)
 - [Draw Shape on Anchor Point](#drawShapeOnAnchorPointjs)
 - [Draw Shape Parallel to Path Segment](#drawShapeParallelToPathSegmentjs)
 - [Extend Handle](#extendHandlejs)
 - [Extend Line](#extendLinejs)
 - [Fit Guide in Artboard](#fitGuideInArtboardjs)
 - [Increase Selected Anchor Points](#increaseSelectedAnchorPointsCWjsincreaseSelectedAnchorPointsCCWjs)
+- [Make Circular Guides](#makeCircularGuidesjs) `New`
+- [Make Crosshair Guides](#makeCrosshairGuidesjs) `New`
 - [Move Guides](#moveGuidesjs)
 - [Rearrange Objects](#rearrangeObjectsjs)
 - [Remove Color in Guide Object](#removeColorInGuideObjectjs)
 - [Select Guides](#selectGuidesjs)
-- [Shift Objects](#shiftObjectsjs) `New`
+- [Shift Objects](#shiftObjectsjs)
 - [Shift Selected Anchor Points](#shiftSelectedAnchorPointsCWjsshiftSelectedAnchorPointsCCWjs)
 - [Show Dimensions](#showDimensionsjs)
-- [Shuffle Objects](#shuffleObjectsjs) `Update`
+- [Shuffle Objects](#shuffleObjectsjs)
 - [Step and Repeat](#stepAndRepeatjs)
 
 ### Text
@@ -142,6 +144,9 @@ If you find a script that interests you, please download it from [![Download](ht
 - [Use Preview Bounds](#toggleUsePreviewBoundsjs)
 - [Zoom to Selection](#toggleZoomToSelectionjs)
 - [Zoom with Mouse Wheel](#toggleZoomWithMouseWheeljs)
+
+### Libraries
+For developers. Libraries of frequently used functions [here](libs/README.md).
 <br><br><br>
 
 
@@ -1716,6 +1721,57 @@ Text objects can also align with each other. In this case, select only the text 
 Illustrator CS or higher
 
 <div align="right">[ <a href="#text">↑ Back to Top ↑</a> ]</div>
+<br>
+
+
+
+
+
+# <a name="makeCircularGuidesjs">makeCircularGuides.js</a>
+[![Download Path.zip](https://img.shields.io/badge/Download-Path.zip-e60012?style=flat-square)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/Path.zip)
+<img src="https://img.shields.io/badge/version-1.0.0-e8e8e8?style=flat-square">  
+This script makes circular guides on the selected anchor points.
+
+![Make Circular Guides](images/makeCircularGuides.png)
+
+### Usage
+1. Select some anchor points with the Direct Selection Tool, and run this script.
+2. Enter a radius. If you want to draw multiple circles, enter the radiuses separated by commas.
+3. If you want to draw a circle using the length of the handle, check the Use Handle Length checkbox.
+
+### Support units
+Point, Pixel, Pica, Inch, Feet, Yard, Millimeter, Centimeter, Meter.  
+These units depend on the ruler units.
+
+### Requirements
+Illustrator CS4 or higher
+
+<div align="right">[ <a href="#path">↑ Back to Top ↑</a> ]</div>
+<br>
+
+
+
+
+
+# <a name="makeCrosshairGuidesjs">makeCrosshairGuides.js</a>
+[![Download Path.zip](https://img.shields.io/badge/Download-Path.zip-e60012?style=flat-square)](https://github.com/sky-chaser-high/adobe-illustrator-scripts/releases/latest/download/Path.zip)
+<img src="https://img.shields.io/badge/version-1.0.0-e8e8e8?style=flat-square">  
+This script makes crosshair guides on the selected anchor points and handles.
+
+![Make Crosshair Guides](images/makeCrosshairGuides.png)
+
+### Usage
+1. Select some anchor points with the Direct Selection Tool, and run this script.
+2. Select the position where you want to draw the guide.
+3. Select the axis of the guide.
+
+> [!NOTE]
+> Draw guides to the edge of the artboard.
+
+### Requirements
+Illustrator CS4 or higher
+
+<div align="right">[ <a href="#path">↑ Back to Top ↑</a> ]</div>
 <br>
 
 
